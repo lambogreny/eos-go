@@ -418,9 +418,9 @@ func (api *API) SignPushTransaction(ctx context.Context, tx *Transaction, chainI
 // To sign a transaction, you need a Signer defined on the `API`
 // object. See SetSigner.
 func (api *API) SignTransaction(ctx context.Context, tx *Transaction, chainID Checksum256, compression CompressionType) (*SignedTransaction, *PackedTransaction, error) {
-	if api.Signer == nil {
-		return nil, nil, fmt.Errorf("no Signer configured")
-	}
+// 	if api.Signer == nil {
+// 		return nil, nil, fmt.Errorf("no Signer configured")
+// 	}
 
 	stx := NewSignedTransaction(tx)
 
